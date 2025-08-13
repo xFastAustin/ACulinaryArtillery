@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Launch Client (Debug)",
+            "name": "Launch Client",
             "type": "coreclr",
             "request": "launch",
             "program": "${env:VINTAGE_STORY}/Vintagestory.exe",
@@ -17,11 +17,9 @@
             },
             "preLaunchTask": "build",
             "args": [
-                // "--playStyle" , "preset-surviveandbuild",
-                // "--openWorld" , "modding test world",
                 "--tracelog",
                 "--addModPath",
-                "${workspaceFolder}/bin/Debug"
+                "${workspaceFolder}/ACulinaryArtillery/bin/Debug/Mods"
             ],
             "console": "internalConsole",
             "stopAtEntry": false
@@ -41,10 +39,21 @@
             "args": [
                 "--tracelog",
                 "--addModPath",
-                "${workspaceFolder}/bin/Debug"
+                "${workspaceFolder}/ACulinaryArtillery/bin/Debug/Mods"
             ],
             "console": "internalConsole",
             "stopAtEntry": false
+        },
+        {
+            "name": "CakeBuild",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build (Cake)",
+            "program": "${workspaceFolder}/CakeBuild/bin/Debug/net7.0/CakeBuild.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/CakeBuild",
+            "stopAtEntry": false,
+            "console": "internalConsole"
         }
     ]
 }
